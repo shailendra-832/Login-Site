@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and sign up form</title>
+    <link rel ="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/16a9bc2baa.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+         <div class="form-box">
+            <h1>Register</h1>
+            <form action="" onsubmit="return validateForm()" value="Register">
+                <div class="input-group">
+                    
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder ="First Name" name="Firstname" id="fname"> 
+                      </div>
+                      
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder ="Last Name" name="Lastname" id="lname">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope" style="padding-top: 3px;"></i>
+                        <input type="email" placeholder ="Email" name="email" id="email">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder ="password" name="pass" id="pwd">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" placeholder ="Phone Number" name="Phone" id="phn">
+                    </div>
+                    <div>
+                        <input class="submit" type="submit" value="Submit" >
+                    </div>
+                </div>
+            </form>
+         </div> 
+    </div>
+</body>
+<script type="text/javascript">
+  function validateForm()
+  {
+    var fname = document.getElementById("fname");
+    var lname = document.getElementById("lname");
+    var email = document.getElementById("email");
+    var pwd = document.getElementById("pwd");
+    var phn = document.getElementById("phn");
+    var z = true;
+
+  
+    if(fname.value=="" || fname.value==null)
+    {
+      z = false;
+      alert("First Name is required");
+      return z;
+    }
+    
+    if(lname.value=="" || lname.value==null)
+    {   
+      z = false;
+      alert("Last Name is required");
+      return z;
+    }
+    
+
+    if(email.value=="" || email.value==null)
+    {
+      z = false;
+      alert("Email is required");
+      return z;
+    }
+    
+
+    if(pwd.value=="" || pwd.value==null)
+    {
+      z = false;
+      alert("Password is required");
+      return z;
+    }
+    
+
+    if(phn.value=="" || phn.value==null)
+    {
+      z = false;
+      alert("Phone number is required");
+      return z;
+    }
+
+    if(phn.value.length != 10)
+    {
+      z = false;
+      alert("phone number length should be 10");
+      return z;
+    }
+    alert("Registered Successfully!");
+    return z;
+    }
+</script>
+</html>
